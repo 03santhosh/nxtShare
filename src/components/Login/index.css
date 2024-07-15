@@ -1,0 +1,70 @@
+.login-container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-img {
+  height: 45px;
+  width: 98px;
+}
+.login-heading {
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 20px;
+}
+.login-label {
+  color: #262626;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.login-input {
+  background-color: #eeeeee;
+  color: #262626;
+  font-family: 'Roboto';
+  font-size: 20px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 30px;
+}
+.login-error-msg {
+  font-family: Roboto;
+  color: #ef4444;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16.41px;
+  text-align: left;
+  margin-top: 0px;
+}
+.login-btn {
+  background-color: #4094ef;
+  color: #ffffff;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  height: 45px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
