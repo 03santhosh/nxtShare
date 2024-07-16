@@ -51,14 +51,14 @@ class Login extends Component {
     const {username, password, showSubmitError, errorMsg} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
-      ;<Redirect to="/" />
+      return <Redirect to="/" />
     }
     return (
       <div className="login-container">
         <img
           className="login-img"
           src="https://res.cloudinary.com/dj3o1nlcs/image/upload/v1720764656/Standard_Collection_8_dsnd19.svg"
-          alt="website logo"
+          alt="website login"
         />
         <h1 className="login-heading">Insta Share</h1>
         <form onSubmit={this.onSubmitForm} className="login-form">

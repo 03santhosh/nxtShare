@@ -118,7 +118,7 @@ class UserStory extends Component {
 
   renderLoadingView = () => (
     <>
-      <div className="loader-container" testid="loader">
+      <div className="loader-container" data-testid="loader">
         <Loader type="TailSpin" color="#4094EF" height={32} width={32} />
       </div>
     </>
@@ -127,7 +127,9 @@ class UserStory extends Component {
   renderFailureView = () => (
     <>
       <h1 className="story-failure-view">Failure View</h1>
-      <button className="retry-btn">Retry</button>
+      <button type="button" className="retry-btn">
+        Retry
+      </button>
     </>
   )
 
@@ -138,7 +140,7 @@ class UserStory extends Component {
         return this.renderSuccessView()
       case apiStatusConstants.failure:
         return this.renderFailureView()
-      case apiStatusConstants.success:
+      case apiStatusConstants.inProgress:
         return this.renderLoadingView()
       default:
         return null

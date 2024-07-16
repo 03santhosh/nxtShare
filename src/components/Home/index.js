@@ -13,7 +13,7 @@ class Home extends Component {
     if (jwtToken === undefined) {
       return <Redirect to="/login" />
     }
-    
+
     return (
       <>
         <Header />

@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
-import {withRouter,Link} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 
 import './index.css'
 
@@ -18,20 +18,18 @@ class Header extends Component {
   onClickLogout = () => {
     const {history} = this.props
     Cookies.remove('jwt_token')
-    history.replace("/login")
+    history.replace('/login')
   }
 
   onDisplayNavbars = () => (
     <div className="nav-li-container">
       <ul className="nav-ul">
-        <Link className="links" to='/'>
-        <li className="nav-li">Home</li>
+        <Link className="links" to="/">
+          <li className="nav-li">Home</li>
         </Link>
-        <Link className="links" to=''>
         <li className="nav-li">Search</li>
-        </Link>
-        <Link className="links" to=''>
-        <li className="nav-li">Profile</li>
+        <Link className="links" to="/my-profile">
+          <li className="nav-li">Profile</li>
         </Link>
       </ul>
       <button className="logout-btn" type="button" onClick={this.onClickLogout}>
@@ -51,11 +49,13 @@ class Header extends Component {
       <>
         <nav className="nav-bar">
           <div className="nav-logo-container">
-            <img
-              className="nav-logo"
-              src="https://res.cloudinary.com/dj3o1nlcs/image/upload/v1720764656/Standard_Collection_8_dsnd19.svg"
-              alt="webiste logo"
-            />
+            <Link to="/" className="links">
+              <img
+                className="nav-logo"
+                src="https://res.cloudinary.com/dj3o1nlcs/image/upload/v1720764656/Standard_Collection_8_dsnd19.svg"
+                alt="webiste logo"
+              />
+            </Link>
             <h1 className="nav-heading">Insta Share</h1>
           </div>
           <img
